@@ -96,6 +96,10 @@ success
   forward-ports:
   source-ports:
 ```
+
+```
+ssh root@10.1.1.44:25346
+```
 ---
 
 # Sevice HTTP
