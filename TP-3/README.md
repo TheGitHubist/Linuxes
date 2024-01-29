@@ -74,12 +74,31 @@ drwx------.  2 root root         59 Dec 18 11:59 sshd_config.d
 [root@localhost ~]# echo $RANDOM
 25346
 [root@localhost ~]# sudo nano /etc/ssh/sshd_config
-[root@localhost ~]#sudo nano /etc/ssh/sshd_config
+[root@localhost ~]# sudo nano /etc/ssh/sshd_config
 [root@localhost ~]# sudo cat /etc/ssh/sshd_config | grep Port
 Port 25346
 #GatewayPorts no
 ```
 
 ```bash
+[root@node1 ~]# sudo firewall-cmd --add-port=25346/tcp --permanent
+success
+[root@node1 ~]# sudo firewall-cmd --zone=public --permanent --remove-port 22/tcp
+success
+[root@node1 ~]# sudo firewall-cmd --reload
+success
 
+[root@node1 ~]# sudo systemctl restart firewalld
+
+[root@node1 ~]# sudo systemctl restart firewalld
+[root@node1 ~]# firewall-cmd --list-all | grep ports
+  ports: 25346/tcp
+  forward-ports:
+  source-ports:
 ```
+---
+
+# Sevice HTTP
+
+## 1. Mise en place
+
