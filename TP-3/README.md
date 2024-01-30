@@ -356,8 +356,7 @@ success
 [root@node1 ~]# sudo firewall-cmd --reload
 success
 
-[root@node1 ~]# sudo chown nginx /var/www/tp3_linux/index.html
-[root@node1 ~]# sudo chown nginx /var/www/tp3_linux/
+[root@node1 ~]# sudo chown -R nginx /var/www/
 [root@node1 ~]# ls -al /var/www/
 total 4
 drwxr-----.  3 root  root   23 Jan 29 18:33 .
