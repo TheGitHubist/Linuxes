@@ -432,5 +432,6 @@ ExecStart=/usr/sbin/nginx
 ## 3. Creation de service
 
 ```powershell
+[root@localhost ~]# echo $RANDOM
 28945
 ```
