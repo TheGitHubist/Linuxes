@@ -1050,7 +1050,7 @@ public (active)
 ```powershell
 [root@localhost nginx]# sudo nano /var/www/site_web_1/index.html
 [root@localhost nginx]# cat /etc/nginx/nginx.conf
-    <!DOCTYPE HTML>
+    <!doctype html>
     <html>
         <head>
         </head>
@@ -1082,7 +1082,7 @@ public (active)
 ```powershell
 [root@localhost nginx]# sudo systemctl restart nginx
 [root@localhost nginx]# curl http://10.1.1.42:8080
-    <!DOCTYPE HTML>
+    <!doctype html>
     <html>
         <head>
         </head>
